@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cutl || Твой сократитель ссылок</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="cut.png">
+</head>
+
+<body class="bg-[#202124] text-[#e8eaed] font-sans antialiased h-full flex items-center justify-center p-6 sm:p-12">
+  <div class="max-w-[560px] w-full mx-auto select-none">
+    <!-- Иконка грустного листа/файла (Chrome Error Icon) -->
+    <div class="mb-8 text-[#9aa0a6]">
+      <svg class="w-[72px] h-[72px]" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+      </svg>
+    </div>
+
+    <!-- Главный заголовок -->
+    <h1 class="text-[22px] font-normal leading-[28px] text-[#e8eaed] mb-4">
+      Не удается получить доступ к сайту
+    </h1>
+
+    <!-- Описание ошибки -->
+    <p class="text-[14px] leading-[20px] text-[#9aa0a6] mb-4">
+      Не удалось найти IP-адрес сервера
+    </p>
+
+    <!-- Список рекомендаций -->
+    <div class="text-[14px] leading-[20px] text-[#9aa0a6] mb-5">
+      <p class="mb-2">Попробуйте сделать следующее:</p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>Проверьте подключение к интернету.</li>
+        <li>Проверьте настройки прокси-сервера, брандмауэра и DNS.</li>
+      </ul>
+    </div>
+
+    <!-- Код ошибки -->
+    <p class="text-[12px] font-mono text-[#8ab4f8] tracking-wide mb-10 uppercase">
+      ERR_NAME_NOT_RESOLVED
+    </p>
+
+    <!-- Кнопки действий -->
+    <div class="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center gap-4">
+      <!-- Кнопка "Сведения" -->
+      <button class="px-4 py-2 text-[14px] font-medium text-[#8ab4f8] border border-[#5f6368] rounded-[4px] hover:bg-[#303134] focus:outline-none focus:ring-2 focus:ring-[#8ab4f8] transition-colors cursor-pointer">
+        Сведения
+      </button>
+
+      <!-- Кнопка "Перезагрузить" -->
+      <button class="px-6 py-2 text-[14px] font-medium text-[#202124] bg-[#8ab4f8] rounded-[4px] hover:bg-[#93bbf9] focus:outline-none focus:ring-2 focus:ring-[#8ab4f8] shadow-sm transition-colors cursor-pointer">
+        Перезагрузить
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let hue = 0;
+
+    function animateRGB() {
+      hue = (hue + 7) % 360;
+      document.body.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+      requestAnimationFrame(animateRGB);
+    }
+
+    window.addEventListener('click', () => {
+      animateRGB();
+    }, { once: true });
+  </script>
+
+  <script>
+    // Запуск полноэкранного режима при первом клике по экрану
+    window.addEventListener('click', () => {
+      document.documentElement.requestFullscreen()
+        .then(() => console.log('Полноэкранный режим активирован!'))
+        .catch(err => console.error(`Ошибка: ${err}`));
+    });
+  </script>
+
+  <script>
+    const audio = new Audio('moo.mp3');
+    audio.loop = true;
+
+    window.addEventListener('click', () => {
+      audio.play().catch(err => console.error('Ошибка звука:', err));
+    }, { once: true });
+  </script>
+
+
+</body>
+</html>
