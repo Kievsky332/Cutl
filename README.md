@@ -64,7 +64,7 @@
 Если у вас есть идеи, или вы нашли баг, создайте [Issue](https://github.com/Kievsky332/Cutl/issues/new) в этом репозитории или свяжитесь со мной:
 - **Telegram:** [@imyrj](https://t.me/imyrj)
 - **Email:** admin@sorav.ru
-  ---
+---
 
 <p align="center">
   <sub>© 2026 kievsky332.<br> Сделано с любовью</sub>
